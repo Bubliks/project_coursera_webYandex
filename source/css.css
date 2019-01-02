@@ -1,0 +1,149 @@
+html,
+body {
+	width: 100%;
+	height: 100%;
+	background-color: #CFD0CF;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	min-width: 600px;
+	padding-top: 0.1px;
+}
+
+.header {
+	text-align: center;
+	margin: 40px auto;
+	user-select: none;
+}
+
+.header > .header__title {
+	margin: 0;
+}
+
+.header__title {
+	font-family: Arial;
+	font-size: 42px;
+	color: #434344;
+	line-height: 47px;
+}
+
+.main {
+	display: grid;
+	width: 595px;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 25px;
+	margin: 0 auto;
+}
+
+.box {
+	position: relative;
+	border: 5px solid white;
+	background-image: linear-gradient(45deg, #22AB93, #19668D);
+	border-radius: 9px;
+	width: 130px;
+	height: 130px;
+	box-shadow: 1px 1px 5px 50% black;
+	box-sizing: border-box;
+	perspective: 600px;
+
+	transform-style: preserve-3d;
+    transition: all 0.6s ease;
+    cursor: pointer;
+}
+
+.box .box__content-front {
+	visibility: hidden;
+	position: absolute;
+	left: 50%;
+	top: 40%;
+	transform: translate(-50%, -40%);
+	font-size: 55px;
+	user-select: none;
+}
+
+.box .box__content-back {
+	background-color: white;
+	visibility: hidden;
+	height: 100%;
+	width: 100%;
+
+}
+
+.enclosure {
+	padding: 30px 0;
+	text-align: center;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	visibility: hidden;
+}
+
+.enclosure__message {
+	background-color: white;
+	padding: 30px 0;
+	width: 350px;
+	min-width: 350px;
+	height: 180px;
+	font-family: Arial, sans-serif;
+	box-sizing: border-box;
+	position: relative;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.enclosure__message-text {
+	font-size: 40px;
+	height: 40px;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 40px;
+}
+
+.enclosure__message-button {
+	font-size: 20px;
+	height: 40px;
+	width: 180px;
+	color: white;
+	background-image: linear-gradient(45deg, #22AB93, #19668D);
+	border: 0;
+	margin: 0;
+	padding: 0;
+	border-radius: 8px;
+}
+
+.enclosure__message-button {
+	font-size: 20px;
+	height: 40px;
+	width: 180px;
+	color: white;
+	background-image: linear-gradient(45deg, #22AB93, #19668D);
+	box-shadow: 1px 1px 1px 0;
+	border: 0 !important;
+	outline: none !important;
+	margin: 0;
+	padding: 0;
+	border-radius: 8px;
+}
+
+.enclosure__message-button:active {
+	border: 0 !important;
+	outline: none !important;
+	box-shadow: inset 2px 1px 8px 0;
+}
+
+.enclosure__message-button:hover {
+	border: 0 !important;
+	outline: none !important;
+}
+
+.timer {
+	text-align: center;
+	font-family: Arial, sans-serif;
+	margin-top: 30px;
+	font-size: 32px;
+	line-height: 36px;
+}
